@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title><%= title %></title>
+</head>
+<body>
+    
+</body>
+</html>
+<body>
+
+    <!-- <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand f-color=white" href="#">MHDT</a>
+        </div>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><span class="glyphicon glyphicon-user"></span><a href="/signout"><i class="fa-sharp fa-solid fa-right-from-bracket fa-2xl" style="color: #000000;"></i></a></li>
+        </ul>
+      </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0   ">
+      <div class="container-fluid bg-info text-center height ">
+        <h2 class="navbar-brand fw-bold font-monospace text-white text-center">WELCOME TO ADMIN HOME</h2>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><span class="glyphicon glyphicon-user"></span><a href="/logout"><i class="fa-sharp fa-solid fa-right-from-bracket fa-2xl" style="color: #000000;"></i></a></li>
+      </ul>
+  </nav>
+  <main class="index pt-5" id="admaindiv">
+    <!-- <div class="container search"> -->
+  
+    <div class="option d-flex align-items-center justify-content-around ">
+        <form action="/search" method="post" name="name">
+          <div class="input-group">
+            <div class="form-outline d-flex p-3">
+              <input type="search" class="form-control " name="search" placeholder="Search" required>
+                  <button id="search-button" type="submit" class="btn btn-primary mx-2">
+                    
+  <lord-icon
+      class="fa-solid fa-magnifying-glass" style="color: #eeeff2;"
+      trigger="hover"
+      colors="primary:#fff"
+      style="width:25px;height:25px"
+      >
+  </lord-icon>
+                  </button>
+            </div>
+            
+          </div>
+        </form>
+        <a href="/add" class="btn-outline-primary  p-2 rounded">
+          <i class="fa-solid fa-user-plus fa-xl fa-bounce" style="color: #000000;"></i>
+  </a>
+    </div>
+  <!-- </div> -->
+    
+  
+    <table class="table table-info container table-bordered my-0 mx-auto">
+        <thead>
+  
+            <tr>
+                <th class="table-primary" scope="col">No.</th>
+                <th class="table-primary" scope="col">Name</th>
+                <th class="table-primary" scope="col">Email</th>
+                <th class="table-primary" scope="col">Edit</th>
+                <th class="table-primary" scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% useData.forEach((x)=>{ %>
+                <tr>
+                    <td>
+                      <%=++i%>
+
+                    </td>
+                    <td>
+                        <%=x.name%>
+                    </td>
+                    <td>
+                        <%=x.email%>
+                    </td>
+                    <td>
+                        <a href="/edit/<%-x._id%>" class="text-white">
+                          <i class="fa-solid fa-pen-to-square fa-xl" style="color: #000000;"></i>
+                        </a>
+                    </td>
+                    <td>
+                      <a href="/del/<%= x._id %>" class="text-white"
+                        onclick="return confirm('Do you want to Remove <%= x.username %> ?')">
+                        <i class="fa-solid fa-trash-can fa-xl" style="color: #000000;"></i>
+                     </a>
+                     
+                    </td>
+                </tr>
+                <% }) %>
+    </table>
+  
+  </main>
+  
+      
+    </body>
+    </html>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>

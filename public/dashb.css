@@ -1,0 +1,253 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:#17435C;
+    color: #ffffff;
+    
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    background-color: #E5D283;
+    display: flex;
+    justify-content: center;
+}
+.main-head{
+    color: #ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+}
+.whole{
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  background: #17435C;
+}
+.header-buttons  {
+  width: 100%;
+}
+.btn{
+  /* float: right; */
+  margin: 10px;
+}
+.use{
+  text-align: center;
+  color: #dadada;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.logoutbtn{
+    background-color: red;
+    width: 100px;
+    height: 30px;
+}
+.table-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.table-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #dadada;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  color: #000000;
+}
+
+.table-container th,
+.table-container td {
+  padding: 12px;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: #161725;
+  color: #ffffff;
+}
+
+.table-container tr:nth-child(even) {
+  background-color: #727577;
+}
+
+.table-container .btn {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+.edit:hover{
+  background-color: rgba(203, 206, 209, 0.815);
+  color: #ffff;
+}
+.delete:hover{
+  background-color: rgba(203, 206, 209, 0.815);
+  color: #ffff;
+}
+.grant:hover{
+  background-color:rgba(203, 206, 209, 0.815);
+  color: #ffff;
+}
+.block:hover{
+  color: #ffff;
+  background-color: rgba(203, 206, 209, 0.815);
+}
+.search-bar {
+  float: right; 
+  margin-right: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+#search-input {
+  padding: 5px 10px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 37px;
+}
+
+#search-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#hero {
+    width: 100%;
+    height: 80vh;
+    background: #17435C;
+  }
+  
+  #hero .container {
+    padding-top: 72px;
+  }
+  
+  #hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #F0F0F0;
+  }
+  
+  #hero h2 {
+    color: #4F709C;
+    margin-bottom: 50px;
+    font-size: 24px;
+  }
+  
+  #hero .btn-get-started {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px 0 0 0;
+    color: #fff;
+    background: #47b2e4;
+  }
+  
+  #hero .btn-get-started:hover {
+    background: #209dd8;
+  }
+  
+  #hero .btn-watch-video {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    margin: 10px 0 0 25px;
+    color: #fff;
+    line-height: 1;
+  }
+  
+  #hero .btn-watch-video i {
+    line-height: 0;
+    color: #fff;
+    font-size: 32px;
+    transition: 0.3s;
+    margin-right: 8px;
+  }
+  
+  #hero .btn-watch-video:hover i {
+    color: #47b2e4;
+  }
+  
+  #hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  }
+  
+  @media (max-width: 991px) {
+    #hero {
+      height: 80vh;
+      text-align: center;
+    }
+  
+    #hero .animated {
+      animation: none;
+    }
+  
+    #hero .hero-img {
+      text-align: center;
+    }
+  
+    #hero .hero-img img {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  
+    #hero .hero-img img {
+      width: 70%;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    #hero .hero-img img {
+      width: 80%;
+    }
+  
+    #hero .btn-get-started {
+      font-size: 16px;
+      padding: 10px 24px 11px 24px;
+    }
+  }
+  
+  @keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+  
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  
+.img{
+ background-size: cover; 
+ background-repeat: no-repeat;
+}
